@@ -9,7 +9,6 @@ body{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: white;
   font-size: 14px;
-  background-color: black;
 }
 
 .container{
@@ -20,6 +19,14 @@ body{
 /* utilities */
 .fa-call{
   font-family: "Font Awesome 6 Free";
+}
+
+.fa-big{
+  font-size: xx-large;
+}
+
+.fa-small{
+  font-size: x-small;
 }
 
 .d-flex{
@@ -67,12 +74,14 @@ header .top-icon .small-icon:nth-child(2)::before{
 
 /* main */
 main{
-  height: calc(100vh - 120px);
+  background-color: black;
+  height: calc(100vh - 80px);
   overflow: auto;
 }
 
 main .row{
   flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 main .card{
@@ -93,10 +102,34 @@ main .card .label .small-icon::after{
 
 /* footer */
 footer{
-  background-color: gray;
+  background-color: #222222;
   height: 80px;
   width: 100%;
   left: 0;
   bottom: 0;
   z-index: 998;
+  padding: 0 10px;
+}
+
+footer .audio,
+footer .video{
+  align-items: flex-end;
+  text-align: center;
+}
+
+footer .comand-av > div > span{
+  margin-right: 30px;
+}
+
+footer .comand-av .audio .small-icon::after,
+footer .comand-av .video .small-icon::after{
+  content: '\f077';
+}
+
+footer .comand-av .audio span .big-icon::after{
+  content: '\f130';
+}
+
+footer .comand-av .video span .big-icon::after{
+  content: '\f03d';
 }
