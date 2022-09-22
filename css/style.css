@@ -16,6 +16,11 @@ body{
   margin: 0 auto;
 }
 
+.big-container{
+  width: 98%;
+  margin: 0 auto;
+}
+
 /* utilities */
 .fa-call{
   font-family: "Font Awesome 6 Free";
@@ -41,15 +46,19 @@ body{
   position: fixed;
 }
 
+footer .active{
+  color: green;
+}
+
 /* header */
 header{
-  background-color: gray;
+  background-color: black;
   padding: 10px;
-  width: 100%;
   justify-content: flex-end;
   z-index: 999;
   top: 0;
   left: 0;
+  right: 0;
   height: 40px;
 }
 
@@ -74,14 +83,14 @@ header .top-icon .small-icon:nth-child(2)::before{
 
 /* main */
 main{
+  margin-top: 40px;
   background-color: black;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 120px);
   overflow: auto;
 }
 
 main .row{
   flex-wrap: wrap;
-  margin-top: 40px;
 }
 
 main .card{
@@ -108,21 +117,35 @@ footer{
   left: 0;
   bottom: 0;
   z-index: 998;
-  padding: 0 10px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-footer .audio,
-footer .video{
-  align-items: flex-end;
+.comand-av > div span,
+.control > div span{
   text-align: center;
+}
+footer > div > div{
+  padding: 10px;
 }
 
 footer .comand-av > div > span{
   margin-right: 30px;
 }
 
+footer div > div .small-icon{
+  padding-bottom: 1.6em;
+  align-self: flex-end;
+}
+
+footer .comand-av > div > span .big-icon,
+footer .control > div > span .big-icon{
+  margin-bottom: 5px;
+}
+
 footer .comand-av .audio .small-icon::after,
-footer .comand-av .video .small-icon::after{
+footer .comand-av .video .small-icon::after,
+footer .control .share-screen .small-icon::after{
   content: '\f077';
 }
 
@@ -132,4 +155,45 @@ footer .comand-av .audio span .big-icon::after{
 
 footer .comand-av .video span .big-icon::after{
   content: '\f03d';
+}
+
+footer .control .invite span .big-icon::after{
+  content: '\f234';
+}
+
+footer .control .manage span .big-icon::after{
+  content: '\f500';
+}
+
+footer .control .polling span .big-icon::after{
+  content: '\e0e3';
+}
+
+footer .control .share-screen span .big-icon::after{
+  content: '\f14d';
+}
+
+footer .control .chat span .big-icon::after{
+  content: '\f075';
+}
+
+footer .control .record span .big-icon::after{
+  content: '\f8d9';
+}
+
+footer .control .breakout-rooms span .big-icon::after{
+  content: '\f009';
+}
+
+footer .control .more span .big-icon::after{
+  content: '\f141';
+}
+
+footer .end-meeting{
+  background-color: #474747;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  color: red;
 }
