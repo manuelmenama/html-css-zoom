@@ -107,7 +107,7 @@ main .card .label{
 }
 
 main .card .label .small-icon::after{
-  content: '\f539';
+  content: '\f131';
 }
 
 /* footer */
