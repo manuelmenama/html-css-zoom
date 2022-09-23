@@ -90,6 +90,7 @@ main{
 }
 
 main .row{
+  justify-content: center;
   flex-wrap: wrap;
 }
 
